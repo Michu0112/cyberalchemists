@@ -83,7 +83,8 @@ body{
     border-radius: 20px;
 }
 .social a img{
-    width: 100%
+    width: 100%;
+    filter: saturate(.3);
 }
 .social a{
     width: 25px;
