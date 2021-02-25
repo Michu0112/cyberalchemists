@@ -12,8 +12,16 @@
     font-style: normal;
 
 }
+html{
+    scroll-behavior: smooth;
+}
 body{
     background-color: black;
+    overflow-x: hidden;
+}
+video{
+    position: fixed;
+    z-index: -1;
 }
 .nav-bar{
     display: flex;
@@ -21,6 +29,9 @@ body{
     font-family: 'grind-font';
     font-size: 1.8em;
     color: white;
+    position: absolute;
+    z-index: 10;
+    width: 100vw;
 }
 .nav-bar .nav-bar-innerBox{
     display: flex;
@@ -33,13 +44,17 @@ body{
     justify-content: center;
     align-items: center;
 }
-.nav-bar-innerBox p{
+.nav-bar-innerBox a{
     margin: 20px;
-    padding: 20px;
+    padding: 10px;
     cursor: pointer;
     position: relative;
+    height: fit-content;
+    color: black;
+    text-decoration: none;
+    transition: transform .4s;
 }
-.nav-bar-innerBox p::before{
+.nav-bar-innerBox a.navA::before{
     content: '';
     position: absolute;
     width:  100%;
@@ -51,24 +66,28 @@ body{
     z-index: -1;
     margin-left: -50%;
     background-position: center;
+    transition: top .4s, filter .4s;
 }
-.nav-bar-innerBox p#home::before{
+.nav-bar-innerBox a#home::before{
     background-image: url('/cyberalchemists/media/backgroundLinkred.png');
 }
-.nav-bar-innerBox p#games::before{
+.nav-bar-innerBox a#games::before{
     background-image: url('/cyberalchemists/media/backgroundLinkred2.png.png');
 }
-.nav-bar-innerBox p#about-us::before{
+.nav-bar-innerBox a#about-us::before{
     background-image: url('/cyberalchemists/media/baclgroundLinkgrey.png');
 }
-.nav-bar-innerBox p#contact::before{
+.nav-bar-innerBox a#contact::before{
     background-image: url('/cyberalchemists/media/backgroundLinkgrey2.png');
 }
-.nav-bar-innerBox div p:first-child{
-    margin-bottom: 0;
-    padding-bottom: 0;
+.nav-bar-innerBox a.navA:hover::before{
+    top: 65px;
+    filter: saturate(2);
 }
-.nav-bar-innerBox div p:nth-child(2){
+.nav-bar-innerBox a.navA:hover{
+    transform: translateY(-5px);
+}
+.nav-bar-innerBox div a:nth-child(2){
     margin-top: 0;
     font-size: 1.6rem;
     margin-bottom: 0;
@@ -76,19 +95,29 @@ body{
 }
 .social{
     background-color: white;
-    padding: 5px;
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 20px;
+    transition: transform .4s;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
 }
 .social a img{
-    width: 100%;
+    width: 25px;
     filter: saturate(.3);
+    transition: filter .4s;
+}
+.social a img:hover{
+    filter: saturate(1);
+}
+.social:hover{
+    transform: scale(1.05);
 }
 .social a{
-    width: 25px;
-    height: 25px;
+    width: 20px;
+    height: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -97,19 +126,24 @@ div.socials{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    width: 70%;
+    width: 80%;
+}
+div.socials a{
+    padding: 5px;
 }
 .face-text{
     color: white;
-    position: absolute;
-    bottom: 0;
     width: 100%;
     display: flex;
+    z-index: -1;
     flex-direction: column;
-    height: 50%;
+    justify-content: flex-end;
+    height: 100vh;
+    padding: 50px;
+    align-items: flex-start;
 }
 .new-game{
-    width: 50%;
+    width: 40%;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -122,6 +156,58 @@ div.socials{
 }
 .game-title{
     font-size: 7rem;
-    margin: 0 13%;
     text-shadow: 5px 0px gray;
+    width: 75%;
+    display: flex;
+    justify-content: center;
+}
+.heroes{
+    display: flex;
+    flex-direction: column;
+    margin-top: 200px;
+}
+.heroes p{
+    font-family: 'grind-font';
+    font-size: 4rem;
+    margin: 50px;
+    color: white;
+    text-align: center;
+}
+.heroes div{
+    display: flex;
+    justify-content: center;
+    margin: 20px 20px;
+}
+.hero{
+    display: flex;
+    height: 800px;
+    width: 350px;
+    position: relative;
+}
+.hero img{
+    position: absolute;
+    width: 200px;
+    height: 700px;
+    z-index: 2;
+}
+.main-character img{
+    top: 20px;
+    height: 680px;
+}
+.main-villian img{
+    height: 800px;
+    width: 380px;
+    top: -70px;
+}
+.side-character img{
+    width: 250px;
+    height: 680px;
+    top: 20px;
+}
+.grey-block{
+    position: absolute;
+    height: 650px;
+    width: 350px;
+    background-color: rgb(172, 172, 172);
+    z-index: 1;
 }
