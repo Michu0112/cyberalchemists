@@ -50,7 +50,7 @@ video{
     cursor: pointer;
     position: relative;
     height: fit-content;
-    color: black;
+    color: white;
     text-decoration: none;
     transition: transform .4s;
 }
@@ -210,4 +210,43 @@ div.socials a{
     width: 350px;
     background-color: rgb(172, 172, 172);
     z-index: 1;
+}
+#aboutUs{
+    color: white;
+    font-family: 'grind-font';
+    display: flex;
+    justify-content: space-between;
+    margin: 100px;
+    margin-top: 200px;
+}
+.text-block{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+}
+.text-block p{
+    font-size: 5rem;
+    line-height: 70px;
+}
+.text-block span{
+    font-size: 3rem;
+}
+#aboutUs p.description{
+    font-size: 1.8rem;
+    font-family: 'Shippori Mincho', serif;
+    line-height: 50px;
+    text-align: justify;
+    align-items: flex-end;
+    justify-content: flex-end;
+    margin-top: 80px;
+}
+.images-block{
+    display: flex;
+    justify-content: space-around;
+    width: 70%;
+}
+.images-block div{
+    background-color: white;
+    height: 500px;
+    width: 300px;
 }
