@@ -22,114 +22,7 @@ body{
 video{
     position: fixed;
     z-index: -1;
-}
-.nav-bar{
-    display: flex;
-    justify-content: flex-end;
-    font-family: 'grind-font';
-    font-size: 1.8em;
-    color: white;
-    position: absolute;
-    z-index: 10;
-    width: 100vw;
-}
-.nav-bar .nav-bar-innerBox{
-    display: flex;
-    width: 50%;
-    justify-content: space-around;
-}
-.nav-bar-innerBox div{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-.nav-bar-innerBox a{
-    margin: 20px;
-    padding: 10px;
-    cursor: pointer;
-    position: relative;
-    height: fit-content;
-    color: white;
-    text-decoration: none;
-    transition: transform .4s;
-}
-.nav-bar-innerBox a.navA::before{
-    content: '';
-    position: absolute;
-    width:  100%;
-    height: 11px;
-    background-repeat: no-repeat;
-    background-size: cover;
-    top: 60px;
-    left: 50%;
-    z-index: -1;
-    margin-left: -50%;
-    background-position: center;
-    transition: top .4s, filter .4s;
-}
-.nav-bar-innerBox a#home::before{
-    background-image: url('/cyberalchemists/media/backgroundLinkred.png');
-}
-.nav-bar-innerBox a#games::before{
-    background-image: url('/cyberalchemists/media/backgroundLinkred2.png.png');
-}
-.nav-bar-innerBox a#about-us::before{
-    background-image: url('/cyberalchemists/media/baclgroundLinkgrey.png');
-}
-.nav-bar-innerBox a#contact::before{
-    background-image: url('/cyberalchemists/media/backgroundLinkgrey2.png');
-}
-.nav-bar-innerBox a.navA:hover::before{
-    top: 65px;
-    filter: saturate(2);
-}
-.nav-bar-innerBox a.navA:hover{
-    transform: translateY(-5px);
-}
-.nav-bar-innerBox div a:nth-child(2){
-    margin-top: 0;
-    font-size: 1.6rem;
-    margin-bottom: 0;
-    color:rgb(188, 239, 255);
-}
-.social{
-    background-color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 20px;
-    transition: transform .4s;
-    cursor: pointer;
-    width: 40px;
-    height: 40px;
-}
-.social a img{
-    width: 25px;
-    filter: saturate(.3);
-    transition: filter .4s;
-}
-.social a img:hover{
-    filter: saturate(1);
-}
-.social:hover{
-    transform: scale(1.05);
-}
-.social a{
-    width: 20px;
-    height: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-div.socials{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    width: 80%;
-}
-div.socials a{
-    padding: 5px;
+    filter: blur(5px);
 }
 .face-text{
     color: white;
@@ -262,7 +155,8 @@ div.socials a{
     width: 100%;
     background-color: black;
     clip-path: polygon(0 0, 0% 100%, 100% 100%);
-    bottom: 0;
+    bottom: -5px;
+    left: -5px;
 }
 .images-block div img{
     width: 100%;
