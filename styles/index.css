@@ -268,8 +268,9 @@ footer .discord:hover{
         align-items: center;
         background-color: black;
     }
-    .social a{
+    div.social a{
         margin: 0;
+        height: auto;
     }
     .social a img{
         width: 50px;
@@ -279,6 +280,9 @@ footer .discord:hover{
         align-items: center;
         justify-content: center;
         height: 80%;
+    }
+    .nav-bar-innerBox a{
+        margin: 0;
     }
     .new-game{
         flex-direction: column;
