@@ -260,7 +260,25 @@ footer .discord:hover{
 }
 @media (max-width: 800px){
     div.nav-bar{
-        display: none;
+        height: 100vh;
+        flex-direction: column;
+        width: 100vw;
+        z-index: 10;
+        justify-content: center;
+        align-items: center;
+        background-color: black;
+    }
+    .social a{
+        margin: 0;
+    }
+    .social a img{
+        width: 50px;
+    }
+    .nav-bar-innerBox{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 80%;
     }
     .new-game{
         flex-direction: column;
@@ -298,6 +316,7 @@ footer .discord:hover{
     footer p{
         flex-direction: column;
         text-align: center;
+        margin-top: 50px;
     }
     footer p a{
         margin: 15px;
