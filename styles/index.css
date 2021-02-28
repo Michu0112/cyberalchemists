@@ -14,10 +14,12 @@
 }
 html{
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 body{
     background-color: black;
     overflow-x: hidden;
+    width: 100vw;
 }
 video{
     position: fixed;
@@ -144,7 +146,6 @@ video{
     width: 450px;
     position: relative;
     overflow:hidden;
-    border-radius: 20px;
 }
 .images-block div p{
     position: absolute;
@@ -193,4 +194,123 @@ footer .discord:hover{
 @keyframes rotate{
     0%{transform: rotate(0deg);}
     100%{transform: rotate(360deg);}
+}
+@media (max-width:1679px){
+    .about-us{
+        flex-direction: column;
+    }
+    .description{
+        margin: 50px;
+    }
+    .text-block{
+        width: 100%;
+    }
+    .text-block p{
+        margin-left: 50px;
+        text-align: center;
+    }
+    .images-block{
+        width: 100%;
+    }
+}
+@media (max-width:1579px){
+    .game-title p{
+        font-size: 5rem;
+    }
+}
+@media (max-width:1450px){
+    .nav-bar div.nav-bar-innerBox{
+        width: 100%;
+    }
+}
+@media (max-width: 1182px){
+    .heroes div{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .heroes div img{
+        position: relative;
+    }
+    .main-villian img{
+        position: absolute;
+        top: 10px;
+    }
+    .game-title{
+        width: 100%;
+    }
+}
+@media (max-width: 1166px){
+    .images-block{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .images-block div{
+        margin: 20px;
+    }
+    .new-game{
+        flex-direction: row;
+        width: 100%;
+    }
+    .new-game p{
+        margin: 20px;
+        text-align: center;
+    }
+}
+@media (max-width: 800px){
+    div.nav-bar{
+        display: none;
+    }
+    .new-game{
+        flex-direction: column;
+    }
+    .new-game p{
+        margin: 0;
+    }
+    .face-text{
+        width: 100%;
+    }
+    .game-title{
+        text-align: center;
+    }
+    #aboutUs{
+        margin: 5px;
+    }
+    .images-block div, div img{
+        width: 70%;
+        height: 70%;
+    }
+    .images-block div p{
+        font-size: 1.5rem;
+    }
+    .text-block p{
+        margin: 0;
+    }
+    #aboutUs p.description{
+        margin: 15px;
+        font-size: 1.5rem;
+        text-align: center;
+    }
+    footer{
+        margin-top: 50px;
+    }
+    footer p{
+        flex-direction: column;
+        text-align: center;
+    }
+    footer p a{
+        margin: 15px;
+    }
+}
+@media (max-width:555px){
+    div.hero{
+        width: 100vw;
+        height: 80%;
+        margin: 100px 0;
+    }
+    .main-villian img{
+        width: 90%;
+        height: 90%;
+    }
 }
