@@ -270,7 +270,7 @@ footer .discord:hover{
         background-color: black;
         right: -100%;
     }
-    .menu-btn{
+    div.menu-btn{
         display: flex;
     }
     div.social a{
