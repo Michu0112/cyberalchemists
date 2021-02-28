@@ -123,6 +123,7 @@ div.socials a{
     background-position: center;
     z-index: 2000;
     transition: .5s transform;
+    display: none;
 }
 .open{
     transform: rotate(360deg);

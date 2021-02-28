@@ -270,6 +270,9 @@ footer .discord:hover{
         background-color: black;
         right: -100%;
     }
+    .menu-btn{
+        display: block;
+    }
     div.social a{
         margin: 0;
         height: auto;
