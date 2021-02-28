@@ -264,9 +264,11 @@ footer .discord:hover{
         flex-direction: column;
         width: 100vw;
         z-index: 10;
+        position: fixed;
         justify-content: center;
         align-items: center;
         background-color: black;
+        right: -100%;
     }
     div.social a{
         margin: 0;
