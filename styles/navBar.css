@@ -113,7 +113,6 @@ div.socials a{
     left: 20px;
     top: 20px;
     width: 80px;
-    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;

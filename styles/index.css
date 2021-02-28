@@ -271,7 +271,7 @@ footer .discord:hover{
         right: -100%;
     }
     .menu-btn{
-        display: block;
+        display: flex;
     }
     div.social a{
         margin: 0;
