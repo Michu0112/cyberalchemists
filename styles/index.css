@@ -21,40 +21,49 @@ body{
     overflow-x: hidden;
     width: 100vw;
 }
-video{
-    position: fixed;
+.main-background{
+    position: absolute;
+    top: 0;
+    left: 0;
     z-index: -1;
-    filter: blur(20px);
+    width: 100%;;
+}
+.logo-box{
+    width: 100vw;
+    height: 50vh;
+}
+.logo-box img{
+    height: 100%;
+    margin: 50px;
 }
 .face-text{
     color: white;
     width: 100%;
-    display: flex;
     z-index: -1;
     flex-direction: column;
-    justify-content: flex-end;
-    height: 100vh;
     padding: 50px;
-    align-items: flex-start;
+    display: flex;
+    justify-content: flex-end;
+    height: 50vh;
 }
 .new-game{
-    width: 40%;
+    width: 50%;
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    font-size: 5rem;
+    font-size: 3.8rem;
     font-family: 'Shippori Mincho', serif;
 }
-.new-game p:last-of-type{
+.new-game p:nth-child(3){
     font-size: 1.5rem;
 }
 .game-title{
-    font-size: 7rem;
+    font-size: 4rem;
     text-shadow: 5px 0px gray;
-    width: 75%;
-    display: flex;
-    justify-content: center;
+}
+.face-text img{
+    width: 350px;
 }
 .heroes{
     display: flex;
@@ -218,6 +227,16 @@ footer .discord:hover{
         font-size: 5rem;
     }
 }
+@media (max-width:1534px){
+    .face-text{
+        justify-content: center;
+        align-items: center;
+        display: flex;
+    }
+    .new-game{
+        width: 100%;
+    }
+}
 @media (max-width:1450px){
     .nav-bar div.nav-bar-innerBox{
         width: 100%;
@@ -238,6 +257,7 @@ footer .discord:hover{
     }
     .game-title{
         width: 100%;
+        text-align: center;
     }
 }
 @media (max-width: 1166px){
@@ -250,12 +270,13 @@ footer .discord:hover{
         margin: 20px;
     }
     .new-game{
-        flex-direction: row;
+        font-size: 2rem;
         width: 100%;
     }
     .new-game p{
         margin: 20px;
         text-align: center;
+        font-size: 2.5rem;
     }
 }
 @media (max-width: 800px){
@@ -276,6 +297,11 @@ footer .discord:hover{
     div.social a{
         margin: 0;
         height: auto;
+    }
+    .logo-box{
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
     .social a img{
         width: 50px;
@@ -340,5 +366,19 @@ footer .discord:hover{
     .main-villian img{
         width: 90%;
         height: 90%;
+    }
+    .logo-box img{
+        width: 100%;
+        margin: 0;
+        padding: 20px;
+    }
+    .face-text{
+        padding-top: 0;
+    }
+    div.heroes{
+        margin-top: 50px;
+    }
+    .heroes p{
+        margin-bottom: 0;
     }
 }
