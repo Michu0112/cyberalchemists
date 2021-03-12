@@ -1,3 +1,4 @@
+
 const navBar = document.querySelector('.nav-bar');
 const menuBtn = document.querySelector('.menu-btn');
 const body = document.querySelector('body');
